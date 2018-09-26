@@ -7,7 +7,7 @@ public class Game implements Product {
 	private PriceCalculator calculator;
 	
 	public Game() {
-		
+		calculator = new GamePriceCalculator();
 	}
 	
 	public Game(String title, String id) {

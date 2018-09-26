@@ -7,7 +7,7 @@ public class Movie implements Product {
 	private PriceCalculator calculator;
 	
 	public Movie() {
-		
+		calculator = new MoviePriceCalculator();
 	}
 	
 	public Movie(String title, String id) {
@@ -38,6 +38,7 @@ public class Movie implements Product {
 
 	@Override
 	public double getPrice(int days) {
+		
 		return calculator.calculatePrice(days);
 	}
 
